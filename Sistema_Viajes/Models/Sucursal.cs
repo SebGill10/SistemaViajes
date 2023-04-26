@@ -14,14 +14,14 @@ namespace Sistema_Viajes.Models
 		[Display(Name = "Nombre Sucursal")]
 		public string? FSucursal { get; set; }
 
-		[Required]
+		[Required]		
 		[MaxLength(100)]
 		[Display(Name = "Ubicacióm Sucursal")]
 		public string? SUbicacion { get; set; }
 
 		[Required]
         [Display(Name = "Distancia de Sucursal")]
-        public int? Distancia { get; set; }
+        public int Distancia { get; set; }
 		public virtual ICollection<SucursalColaborador>? SucursalColaboradores { get; set; }
 
 	}
