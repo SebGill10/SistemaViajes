@@ -11,8 +11,8 @@ using Sistema_Viajes.Context;
 namespace Sistema_Viajes.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230425011110_Sucurrsal")]
-    partial class Sucurrsal
+    [Migration("20230425055512_Transportista")]
+    partial class Transportista
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,57 +22,6 @@ namespace Sistema_Viajes.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("Sistema_Viajes.Models.Colaborador", b =>
-                {
-                    b.Property<int>("IdColaborador")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdColaborador"), 1L, 1);
-
-                    b.Property<string>("Apellido")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Direccion")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("IdColaborador");
-
-                    b.ToTable("Colaboradores");
-                });
-
-            modelBuilder.Entity("Sistema_Viajes.Models.Sucurrsal", b =>
-                {
-                    b.Property<int>("IdSucurrsal")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdSucurrsal"), 1L, 1);
-
-                    b.Property<string>("FSucurrsal")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("SUbicacion")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("IdSucurrsal");
-
-                    b.ToTable("Sucurrsales");
-                });
 
             modelBuilder.Entity("Sistema_Viajes.Models.Transportista", b =>
                 {

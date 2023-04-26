@@ -9,7 +9,7 @@ namespace Sistema_Viajes.Controllers
 {
     public class LoginController : Controller
     {
-        static string conexion = "Server=localhost;Database=SistemaViajes; Trusted_Connection=true;MultipleActiveResultSets=true";
+        static string conexion = "Server=localhost;Database=SistemaDeViajes; Trusted_Connection=true;MultipleActiveResultSets=true";
 
 		public object Session { get; private set; }
 

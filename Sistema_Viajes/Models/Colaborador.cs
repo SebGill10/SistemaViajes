@@ -12,22 +12,18 @@ namespace Sistema_Viajes.Models
 		[Required]
 		[MaxLength(50)]
 		[Display(Name = "Nombre Colaborador")]
-		public string Nombre { get; set; }
+		public string? Nombre { get; set; }
 
 		[Required]
 		[MaxLength(50)]
 		[Display(Name = "Apellido Colaborador")]
-		public string Apellido { get; set; }
+		public string? Apellido { get; set; }
 
 		[Required]
 		[MaxLength(50)]
 		[Display(Name = "Dirección Colaborador")]
-		public string Direccion { get; set; }
+		public string? Direccion { get; set; }
 
-		[Required]
-		public int SucurrsalId { get; set; }
-
-		[ForeignKey("SucurrsalId")]
-		public Sucurrsal Sucurrsal { get; set; }
+		public virtual ICollection<SucursalColaborador>? SucursalColaboradores { get; set; }
 	}
 }

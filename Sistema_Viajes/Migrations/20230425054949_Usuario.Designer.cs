@@ -11,8 +11,8 @@ using Sistema_Viajes.Context;
 namespace Sistema_Viajes.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230424224418_Colaborador")]
-    partial class Colaborador
+    [Migration("20230425054949_Usuario")]
+    partial class Usuario
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,34 +22,6 @@ namespace Sistema_Viajes.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("Sistema_Viajes.Models.Colaborador", b =>
-                {
-                    b.Property<int>("IdColaborador")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdColaborador"), 1L, 1);
-
-                    b.Property<string>("Apellido")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Direccion")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("IdColaborador");
-
-                    b.ToTable("Colaboradores");
-                });
 
             modelBuilder.Entity("Sistema_Viajes.Models.Usuario", b =>
                 {
