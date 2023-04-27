@@ -71,7 +71,10 @@ namespace Sistema_Viajes.Controllers
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
-                ViewData["ColaboradorId"] = new SelectList(_context.Colaboradores, "IdColaborador", "Apellido", sucursalColaborador.ColaboradorId);
+                ViewData["ColaboradorId"] = new SelectList(_context.Colaboradores,
+                                                           "IdColaborador",
+                                                           "Apellido",
+                                                           sucursalColaborador.ColaboradorId);
                 ViewData["SucursalId"] = new SelectList(_context.Sucursales, "IdSucursal", "FSucursal", sucursalColaborador.SucursalId);
                 return View(sucursalColaborador);
 

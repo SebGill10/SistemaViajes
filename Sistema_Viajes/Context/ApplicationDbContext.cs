@@ -14,6 +14,9 @@ namespace Sistema_Viajes.Context
             modelBuilder.Entity<SucursalColaborador>()
                 .HasKey(sucursalColaborador => new {sucursalColaborador.SucursalId, sucursalColaborador.ColaboradorId});
 
+            modelBuilder.Entity<RegistroViajeColaborador>()
+                .HasKey(registroViajeColaborador => new { registroViajeColaborador.ColaboradorId, registroViajeColaborador.ViajeId });
+
             base.OnModelCreating(modelBuilder);
 
         }
@@ -22,6 +25,8 @@ namespace Sistema_Viajes.Context
         public DbSet<Colaborador> Colaboradores { get; set;}
         public DbSet<Sucursal> Sucursales { get; set; }
         public DbSet<Transportista> Transportistas { get; set; }
+        public DbSet<RegistroViaje> RegistroViajes { get; set; }
         public DbSet<SucursalColaborador> SucursalColaboradores { get; set; }
+        public DbSet<RegistroViajeColaborador> RegistroViajeColaboradores { get; set; }
     }
 }
