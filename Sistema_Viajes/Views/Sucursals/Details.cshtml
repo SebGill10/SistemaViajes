@@ -1,11 +1,11 @@
 ﻿@model Sistema_Viajes.Models.Sucursal
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Informacion";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<h1>Información</h1>
 
 <div>
     <h4>Sucursal</h4>
@@ -32,6 +32,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdSucursal">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-outline-success" asp-action="Edit" asp-route-id="@Model?.IdSucursal">Regresar a editar</a> |
+    <a asp-action="Index">Regresar a sucursal</a>
 </div>
