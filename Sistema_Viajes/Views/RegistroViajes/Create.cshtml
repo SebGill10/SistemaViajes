@@ -1,13 +1,13 @@
 ﻿@model Sistema_Viajes.Models.RegistroViaje
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Crear";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
+<h1>Crear</h1>
 
-<h4>RegistroViaje</h4>
+<h4>Registro de SViaje</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -32,14 +32,14 @@
                 <span asp-validation-for="FechaViaje" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear Registro" class="btn btn-outline-success" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Regresar a registro</a>
 </div>
 
 @section Scripts {

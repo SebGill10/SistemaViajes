@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<Sistema_Viajes.Models.SucursalColaborador>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Administrar sucursales";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Administrar sucursales</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-outline-success" asp-action="Create">Crear nuevo puesto</a>
 </p>
 <table class="table">
     <thead>
@@ -38,9 +38,9 @@
                 @Html.DisplayFor(modelItem => item.Colaborador.Apellido)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Editar", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Informació", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Eliminar", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
 }
