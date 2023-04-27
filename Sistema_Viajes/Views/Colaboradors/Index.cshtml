@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<Sistema_Viajes.Models.Colaborador>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Colaboradores FarSiman";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Colaboradores FarSiman</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-outline-success" asp-action="Create">Crear nuevo Colaborador</a>
 </p>
 <table class="table">
     <thead>
@@ -38,9 +38,9 @@
                 @Html.DisplayFor(modelItem => item.Direccion)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdColaborador">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdColaborador">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdColaborador">Delete</a>
+                    <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.IdColaborador">Edit</a> |
+                    <a class="btn btn-outline-info" asp-action="Details" asp-route-id="@item.IdColaborador">Details</a> |
+                    <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.IdColaborador">Delete</a>
             </td>
         </tr>
 }
